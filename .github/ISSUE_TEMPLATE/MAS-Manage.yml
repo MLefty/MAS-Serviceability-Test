@@ -1,0 +1,67 @@
+name: MAS Manage - Serviceability Request
+description: This option is to request a MAS ASSIST serviceability enhancment
+title: "[Serviceability] What would you like to see added to MAS Assist regarding serviceability?"
+labels: ["Status - Requires L2 SME Review", "MAS - Assist"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to fill out this serviceability request!
+        Please update the title above and fill in all the fields before submitting the request. 
+        If any information is missing, we will need to contact you to complete it before we can submit the request into the review syustem. This adds delays.
+  - type: input
+    id: contact emmail
+    attributes:
+      label: Contact Details
+      description: Please provide your email address in case we need to get in touch with you for more information.
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: What serviceability feature would you like to see in the product going forward?
+    attributes:
+      label: What serviceability feature would you like to see in the product going forward?
+      description: Please give as much detial as possible, including what the desired outcome would be if this request was put into the product.
+      placeholder: Tell us what you see!
+      value: "ex. Problem 'X' occured, when doing 'Y' when troubleshooting, a serviceability enhancement that does 'Z', would have been useful because..."
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      description: What core version of MAS are you running?
+      options:
+        - 8.3 (Previous release)
+        - 8.4 (Previous release)
+        - 8.5 (Previous release)
+        - 8.6 (Current release)
+        - 8.7 (Future release)
+        - 8.8 (Future release)
+    validations:
+      required: true
+  - type: dropdown
+    id: manage version
+    attributes:
+      label: Manage Version
+      description: What version of Manage are you running?
+      options:
+        - 8.0.0 (Previous release)
+        - 8.1.0 (Previous release)
+        - 8.2.0 (Current release)
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true

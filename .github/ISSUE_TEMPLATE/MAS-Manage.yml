@@ -7,8 +7,6 @@ body:
     attributes:
       value: |
         Thank you for taking the time to fill out this serviceability request!
-        Please update the title above and fill in all the fields before submitting the request. 
-        If any information is missing, we will need to contact you to complete it before we can submit the request into the review syustem. This adds delays.
   - type: input
     id: contact emmail
     attributes:

@@ -27,6 +27,18 @@ body:
         - Development
         - Pre-sales
         - SWAT
+    validations:
+      required: true
+  - type: dropdown
+    id: field
+    attributes:
+      label: Does this request originate from the field or internal discovery
+      description: Please select the business area from the dropdown
+      options:
+        - Field (customer)
+        - Internal (IBM requesting)
+    validations:
+      required: true
   - type: textarea
     id: what-happened
     attributes:

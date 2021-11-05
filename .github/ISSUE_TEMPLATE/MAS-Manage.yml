@@ -1,34 +1,79 @@
 name: MAS Manage - Serviceability Request
-description: This option is to request a MAS ASSIST serviceability enhancment
-title: "[Serviceability] What would you like to see added to MAS Assist regarding serviceability?"
+description: This option is to request a serviceability enhancement to the Health are of the Maximo Application Suite
+title: "[Serviceability] What would you like to see added to MAS regarding serviceability?"
 labels: ["Status - Requires L2 SME Review"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thank you for taking the time to fill out this serviceability request!
+        Thank you for taking the time to fill out this serviceability request! Please replace the title above with a description of your request.
+  - type: markdown
+    attributes:
+      value: |
+        Please note submitting this form does not garentee that the request will be added to the product. It simplay enables the idea to be reviewed for consideration.      
   - type: input
-    id: contact emmail
+    id: contact
     attributes:
       label: Contact Details
       description: Please provide your email address in case we need to get in touch with you for more information.
-      placeholder: ex. email@example.com
+      placeholder: ex. mark@example.ibm.com
+    validations:
+      required: false
+  - type: dropdown
+    id: department
+    attributes:
+      label: Which business area do you work in?
+      description: Please select the business area from the dropdown
+      options:
+        - Support
+        - CDS
+        - GBS
+        - Development
+        - Pre-sales
+        - SWAT
+    validations:
+      required: true
+  - type: dropdown
+    id: field
+    attributes:
+      label: Does this request originate from the field or internal discovery
+      description: Please select the origin area from the dropdown
+      options:
+        - Field (customer)
+        - Internal (IBM requesting)
+    validations:
+      required: true
+  - type: input
+    id: case
+    attributes:
+      label: Salesforce Case Number
+      description: If the request is field based please provide a salesforce case number if possible.
+      placeholder: TS*********
     validations:
       required: false
   - type: textarea
-    id: What serviceability feature would you like to see in the product going forward?
+    id: what-happened
     attributes:
-      label: What serviceability feature would you like to see in the product going forward?
-      description: Please give as much detial as possible, including what the desired outcome would be if this request was put into the product.
+      label: What serviceability feature would you like to see in the product going forward
+      description:  Please give as much detail as possible, including what the desired outcome would be if this request was put into the product.
       placeholder: Tell us what you see!
-      value: ex. Problem 'X' occured, when doing 'Y' when troubleshooting, a serviceability enhancement that does 'Z', would have been useful because...
+      value: Problem X occured, when doing Y when troubleshooting, a serviceability enhancement that does Z, would have been useful because..
+    validations:
+      required: true
+  - type: textarea
+    id: desired
+    attributes:
+      label: What would be the desired result of this request being implimented?
+      description:  Please give as much detail as possible on what you would like to see as the result of this requerst being added to the product. This field is for you to provided how you would like a feature to look, behave, etc. This will aid development in design.
+      placeholder: Tell us what you see!
+      value: ex. if feature X displayed X,Y and Z in this format, it would make problem determination faster when looking at X
     validations:
       required: true
   - type: dropdown
     id: version
     attributes:
-      label: Version
-      description: What core version of MAS are you running?
+      label: MAS Version
+      description: What version of MAS are you running?
       options:
         - 8.3 (Previous release)
         - 8.4 (Previous release)
@@ -39,14 +84,49 @@ body:
     validations:
       required: true
   - type: dropdown
-    id: manage version
+    id: versionarea
     attributes:
       label: Manage Version
-      description: What version of Manage are you running?
+      description: What version of Health are you running?
       options:
         - 8.0.0 (Previous release)
         - 8.1.0 (Previous release)
         - 8.2.0 (Current release)
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: What is the urgency this request is implimented into the product?
+      description: Please select the severity of urgency from the drop-down
+      multiple: true
+      options:
+        - Sev 1 - Business wide impoact - Fix in current release
+        - Sev 2 - High impact, but not critical - Fix in next upcoming release is possible
+        - Sev 3 - Medium impact - add in either of next 2 upcoming releases
+        - Sev 4 - Low impact - Request to be added to plan, add to product when possible
+    validations:
+      required: true
+  - type: dropdown
+    id: scope
+    attributes:
+      label: If this request was added to the product, how many case would you estimate this aids/impacts a month
+      description: Please select the rough number of cases you think this request would benifit a month. This helps build the business case.
+      multiple: true
+      options:
+        - 1-4 Cases a month
+        - 5-19 Cases a month
+        - 20-30 Cases a month
+        - 30+ Cases a month
+    validations:
+      required: true
+  - type: textarea
+    id: busimpact
+    attributes:
+      label: Business Justification of adding this request to the product
+      description:  Please provide any information which depicts the business impact to customers and/or IBM. This will help form the business case to see if this request will be possible.
+      placeholder: Tell us what you see!
+      value: ex. What would the impact be to customers if this request wasn't actioned. What would the estimated impact be to IBM in case reduction or time to resolution reduction?
     validations:
       required: true
   - type: textarea

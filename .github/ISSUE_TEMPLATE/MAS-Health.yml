@@ -28,7 +28,7 @@ body:
     id: version
     attributes:
       label: Version
-      description: What version of software are you running?
+      description: What version of MAS are you running?
       options:
         - 8.3 (Previous release)
         - 8.4 (Previous release)
@@ -38,6 +38,15 @@ body:
         - 8.8 (Future release)
     validations:
       required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Versionarea
+      description: What version of Health are you running?
+      options:
+        - 8.0.0 (Previous release)
+        - 8.1.0 (Previous release)
+        - 8.2.0 (Current release)
   - type: dropdown
     id: browsers
     attributes:

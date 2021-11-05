@@ -39,9 +39,9 @@ body:
     validations:
       required: true
   - type: dropdown
-    id: version
+    id: versionarea
     attributes:
-      label: Versionarea
+      label: Health Version
       description: What version of Health are you running?
       options:
         - 8.0.0 (Previous release)

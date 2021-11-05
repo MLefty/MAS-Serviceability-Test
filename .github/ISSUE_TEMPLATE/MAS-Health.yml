@@ -6,22 +6,22 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
+        Thank you for taking the time to fill out this serviceability request!
   - type: input
     id: contact
     attributes:
       label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
+      description: Please provide your email address in case we need to get in touch with you for more information.
+      placeholder: ex. mark@example.ibm.com
     validations:
       required: false
   - type: textarea
     id: what-happened
     attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
+      label: What serviceability feature would you like to see in the product going forward?
+      description:  Please give as much detail as possible, including what the desired outcome would be if this request was put into the product.
       placeholder: Tell us what you see!
-      value: "A bug happened!"
+      value: Problem X occured, when doing Y when troubleshooting, a serviceability enhancement that does Z, would have been useful because..
     validations:
       required: true
   - type: dropdown

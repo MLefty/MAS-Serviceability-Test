@@ -82,15 +82,18 @@ body:
     validations:
       required: true
   - type: dropdown
-    id: browsers
+    id: severity
     attributes:
-      label: What browsers are you seeing the problem on?
+      label: What is the urgency this request is implimented into the product?
+      description: Please select the severity of urgency from the drop-down
       multiple: true
       options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
+        - Sev 1 - Business wide impoact - Fix in current release
+        - Sev 2 - High impact, but not critical - Fix in next upcoming release is possible
+        - Sev 3 - Medium impact - add in either of next 2 upcoming releases
+        - Sev 4 - Low impact - Request to be added to plan, add to product when possible
+    validations:
+      required: true
   - type: textarea
     id: logs
     attributes:

@@ -56,6 +56,15 @@ body:
       value: Problem X occured, when doing Y when troubleshooting, a serviceability enhancement that does Z, would have been useful because..
     validations:
       required: true
+  - type: textarea
+    id: desired
+    attributes:
+      label: What would be the desired result of this request being implimented?
+      description:  Please give as much detail as possible on what you would like to see as the result of this requerst being added to the product. This field is for you to provided how yopu would like a feature to look, behave, etc. This will aid development in design.
+      placeholder: Tell us what you see!
+      value: Problem X occured, when doing Y when troubleshooting, a serviceability enhancement that does Z, would have been useful because..
+    validations:
+      required: true
   - type: dropdown
     id: version
     attributes:
@@ -92,6 +101,28 @@ body:
         - Sev 2 - High impact, but not critical - Fix in next upcoming release is possible
         - Sev 3 - Medium impact - add in either of next 2 upcoming releases
         - Sev 4 - Low impact - Request to be added to plan, add to product when possible
+    validations:
+      required: true
+  - type: dropdown
+    id: scope
+    attributes:
+      label: If this request was added to the product, how many case would you estimate this aids/impacts a month
+      description: Please select the rough number of cases you think this request would benifit a month. This helps build the business case.
+      multiple: true
+      options:
+        - 1-4 Cases a month
+        - 5-19 Cases a month
+        - 20-30 Cases a month
+        - 30+ Cases a month
+    validations:
+      required: true
+  - type: textarea
+    id: busimpact
+    attributes:
+      label: Business Justification of adding this request to the product
+      description:  Please provide any information which depicts the business impact to customers and/or IBM. This will help form the business case to see if this request will be possible.
+      placeholder: Tell us what you see!
+      value: ex. What would the impact be to customers if this request wasn't actioned. What would the estimated impact be to IBM in case reduction or time to resolution reduction?
     validations:
       required: true
   - type: textarea

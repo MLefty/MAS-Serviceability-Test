@@ -79,6 +79,8 @@ body:
         - 8.0.0 (Previous release)
         - 8.1.0 (Previous release)
         - 8.2.0 (Current release)
+    validations:
+      required: true
   - type: dropdown
     id: browsers
     attributes:

@@ -33,12 +33,20 @@ body:
     id: field
     attributes:
       label: Does this request originate from the field or internal discovery
-      description: Please select the business area from the dropdown
+      description: Please select the origin area from the dropdown
       options:
         - Field (customer)
         - Internal (IBM requesting)
     validations:
       required: true
+  - type: input
+    id: case
+    attributes:
+      label: Salesforce Case Number
+      description: If the request is field based please provide a salesforce case number if possible.
+      placeholder: TS*********
+    validations:
+      required: false
   - type: textarea
     id: what-happened
     attributes:

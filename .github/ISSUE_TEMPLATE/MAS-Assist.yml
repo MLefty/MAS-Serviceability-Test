@@ -30,7 +30,7 @@ body:
         - GBS
         - Development
         - Pre-sales
-        - SWAT.
+        - SWAT
     validations:
       required: true
   - type: dropdown

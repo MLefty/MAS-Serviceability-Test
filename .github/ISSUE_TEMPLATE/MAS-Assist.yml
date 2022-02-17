@@ -11,14 +11,6 @@ body:
     attributes:
       value: |
         Please note submitting this form does not garentee that the request will be added to the product. It simplay enables the idea to be reviewed for consideration.      
-  - type: input
-    id: contact
-    attributes:
-      label: Contact Details
-      description: Please provide your email address in case we need to get in touch with you for more information.
-      placeholder: ex. mark@example.ibm.com
-    validations:
-      required: false
   - type: dropdown
     id: department
     attributes:
@@ -43,14 +35,6 @@ body:
         - Internal (IBM requesting)
     validations:
       required: true
-  - type: input
-    id: case
-    attributes:
-      label: Salesforce Case Number
-      description: If the request is field based please provide a salesforce case number if possible.
-      placeholder: TS*********
-    validations:
-      required: false
   - type: textarea
     id: what-happened
     attributes:

@@ -1,5 +1,5 @@
 name: MAS Assist - Serviceability Request
-description: This option is to request a serviceability enhancement to the Assist area of the Maximo Application Suite
+description: This option is to request a serviceability enhancement to the Assist area of the Maximo Application Suite. Please ensure no personal detial are added to the requests as these will be publically visable.
 title: "[Serviceability] What would you like to see added to MAS regarding serviceability?"
 labels: ["Status - Requires L2 SME Review", "Product Area - Assist"]
 body:
@@ -89,19 +89,6 @@ body:
         - Sev 2 - High impact, but not critical - Fix in next upcoming release is possible
         - Sev 3 - Medium impact - add in either of next 2 upcoming releases
         - Sev 4 - Low impact - Request to be added to plan, add to product when possible
-    validations:
-      required: true
-  - type: dropdown
-    id: scope
-    attributes:
-      label: If this request was added to the product, how many case would you estimate this aids/impacts a month
-      description: Please select the rough number of cases you think this request would benifit a month. This helps build the business case.
-      multiple: true
-      options:
-        - 1-4 Cases a month
-        - 5-19 Cases a month
-        - 20-30 Cases a month
-        - 30+ Cases a month
     validations:
       required: true
   - type: textarea

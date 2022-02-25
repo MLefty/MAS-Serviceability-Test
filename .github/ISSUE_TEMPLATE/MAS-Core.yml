@@ -82,7 +82,7 @@ body:
     id: severity
     attributes:
       label: What is the urgency this request is implimented into the product?
-      description: Please select the severity of urgency from the drop-down. Note: This does not guarantee your choice will be possible, but it helps build the business case.
+      description: Please select the severity of urgency from the drop-down. Note, This does not guarantee your choice will be possible, but it helps build the business case.
       multiple: true
       options:
         - Sev 1 - Business wide impact - Fix ASAP (current release if possible)

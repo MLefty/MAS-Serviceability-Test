@@ -74,7 +74,7 @@ body:
     attributes:
       label: Product Version
       description: What version of the proiduct are you running?
-       placeholder: Tell us what you see!
+      placeholder: Tell us what you see!
       value: please try to provide full release name and version number for better product identification 
     validations:
       required: true
